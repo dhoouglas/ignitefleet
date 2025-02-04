@@ -1,3 +1,4 @@
+import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import {
   useFonts,
@@ -9,10 +10,13 @@ import theme from "./src/theme";
 
 import { SignIn } from "./src/screens/Signin";
 import { Loading } from "./src/components/Loading";
-import { StatusBar } from "react-native";
+
+import Config from "react-native-config";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
+
+  console.log(Config.ANDROID_CLIENT_ID);
 
   if (!fontsLoaded) {
     return <Loading />;
