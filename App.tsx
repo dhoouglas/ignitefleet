@@ -15,6 +15,9 @@ import { Loading } from "./src/components/Loading";
 import React from "react";
 
 export default function App() {
+  // const androidClientId = process.env.EXPO_PUBLIC_ANDROID_CLIENT_ID;
+  // console.log(androidClientId);
+
   // tela de splash
   useEffect(() => {
     // const prepare = async () => {
